@@ -47,6 +47,7 @@ Stock
 |     Get      |   localhost:8080/api/stocks/name/{name}    |      200      |      Get the quantity in the stock of the product by its name      |
 |     Get      | localhost:8080/api/stocks/checkDate/{name} |      200      |   Get last updated date of the product in the stock by its name    |
 
+Product_Order
 
 |  HttpMethod  |                    URL path                     |  HTTP status  |                     description                     |
 |:------------:|:-----------------------------------------------:|:-------------:|:---------------------------------------------------:|
@@ -58,7 +59,7 @@ User:
 |  HttpMethod  |             URL path              |  HTTP status  |           description            |
 |:------------:|:---------------------------------:|:-------------:|:--------------------------------:|
 |     Post     |  localhost:8080/api/users/signup  |      201      |        signup to the api         |
-| :----------: | :-------------------------------: | :-----------: | :------------------------------: |
+
 
 Authentication:
 
