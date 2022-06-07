@@ -36,10 +36,6 @@ public class ProductResource {
         return ResponseEntity.ok().body(productService.getProductById(id));
     }
 
-    /*@GetMapping("/requestParam")
-    public ResponseEntity<ProductDto> getProductById2(@RequestParam(name = "id") int id){
-        return ResponseEntity.ok().body(productService.getProductById(id));
-    }*/
 
     @ApiOperation(value = "Create a new product REST API")
     @PostMapping

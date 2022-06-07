@@ -24,7 +24,7 @@ public class UserResource {
         this.userService = userService;
     }
 
-    @ApiOperation(value = "Get All Users REST API")
+   /* @ApiOperation(value = "Get All Users REST API")
     @GetMapping
     public ResponseEntity<List<UserDto>> getAllUsers() {
         return ResponseEntity.ok().body(userService.getAllUsers());
@@ -34,7 +34,7 @@ public class UserResource {
     @GetMapping("/id/{id}")
     public ResponseEntity<UserDto> getUserById(@PathVariable(name = "id") int id) {
         return ResponseEntity.ok().body(userService.getUserById(id));
-    }
+    }*/
 
 
     @ApiOperation(value = "add new user REST API")
@@ -48,7 +48,7 @@ public class UserResource {
         return new ResponseEntity<>(userService.addUser(userDto), HttpStatus.CREATED);
     }
 
-    @ApiOperation(value = "update the data about the user REST API")
+   /* @ApiOperation(value = "update the data about the user REST API")
     @PutMapping("/{id}")
     public ResponseEntity<UserDto> updateUser(@Valid @RequestBody UserDto userDto, @PathVariable(name = "id") int id) {
         return new ResponseEntity<>(userService.updateUser(userDto, id), HttpStatus.OK);
@@ -60,5 +60,5 @@ public class UserResource {
         userService.deleteUser(id);
         return new ResponseEntity<>("successfully deleted!", HttpStatus.OK);
 
-    }
+    }*/
 }

@@ -8,10 +8,7 @@
 		<version>2.7.0</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<!--<groupId>com.clliffe</groupId>
-	<artifactId>blog-service</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<name>blog-service</name>-->
+
 	<groupId>com.example</groupId>
 	<artifactId>wholeProject</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
@@ -104,6 +101,6 @@
 				</configuration>
 			</plugin>
 		</plugins>
+		<finalName>order-management-docker</finalName>
 	</build>
-
 </project>
