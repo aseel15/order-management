@@ -22,12 +22,10 @@ public class CustomerDto {
     private Integer id;
 
     @ApiModelProperty(value = "First Name of The Customer")
-    //@NotEmpty(message = "first name should not be null or empty")
     @NonNull
     private String firstName;
 
     @ApiModelProperty(value = "Last name of the customer")
-    //@NotEmpty(message = "last name should not be null or empty")
     private String lastName;
 
     @ApiModelProperty(value = "The date of birth of the customer")

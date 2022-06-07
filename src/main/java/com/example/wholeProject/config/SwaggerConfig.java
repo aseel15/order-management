@@ -12,7 +12,7 @@ import springfox.documentation.spring.web.plugins.Docket;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
-
+//to config what should be displayed in the swagger ui
 @Configuration
 public class SwaggerConfig {
 

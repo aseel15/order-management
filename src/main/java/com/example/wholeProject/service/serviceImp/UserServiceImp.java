@@ -42,19 +42,20 @@ public class UserServiceImp implements UserDetailsService, UserService {
         return new org.springframework.security.core.userdetails.User(user.getUsername(), user.getPassword(),getAuthority());
     }
 
+    //to get the authority of the user
     private List<SimpleGrantedAuthority> getAuthority() {
         return Arrays.asList(new SimpleGrantedAuthority("ROLE_ADMIN"));
     }
 
-    @Override
+    /*@Override
     public List<UserDto> getAllUsers() {
         List<User> users = userRepository.findAll();
         return users.stream().map(user -> mapToDto(user)).collect(Collectors.toList());
-    }
+    }*/
 
 
 
-    @Override
+    /*@Override
     public UserDto getUserById(int id) {
         User user = userRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException(UserServiceImp.class.getName(), "id", id));
         return mapToDto(user);
@@ -92,7 +93,7 @@ public class UserServiceImp implements UserDetailsService, UserService {
         User user = userRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException(UserServiceImp.class.getName(), "id", id));
         userRepository.delete(user);
 
-    }
+    }*/
 
     @Override
     public UserDto getByUsername(String username) {
@@ -102,26 +103,13 @@ public class UserServiceImp implements UserDetailsService, UserService {
 
     private UserDto mapToDto(User user) {
         UserDto userDto = new UserDto();
-
         BeanUtils.copyProperties(user, userDto, "password");
-       /* userDto.setId(user.getId());
-        userDto.setEmail(user.getEmail());
-        userDto.setUsername(user.getUsername());
-        userDto.setName(user.getName());
-        userDto.setPassword(user.getPassword());*/
-
         return userDto;
     }
 
     private User mapToEntity(UserDto userDto) {
         User user = new User();
-
         BeanUtils.copyProperties(userDto, user, "password");
-        /*user.setUsername(userDto.getUsername());
-        user.setEmail(userDto.getEmail());
-        user.setPassword(userDto.getPassword());
-        user.setName(userDto.getName());*/
-
         return user;
     }
 }

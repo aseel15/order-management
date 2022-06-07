@@ -22,6 +22,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
 import java.net.Authenticator;
+//here is the configurations and the methods allowed to execute before and after sign in
 @Configuration
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(prePostEnabled = true)
@@ -30,14 +31,17 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     private UserDetailsService userDetailsService;
 
+    //handle the un authorized users
     @Autowired
     private JwtAuthenticationEntryPoint unAuthorizedHandled;
+
 
     @Bean
     public JwtAuthenticationFilter jwtAuthenticationFilter(){
         return  new JwtAuthenticationFilter();
     }
 
+    //to encode the password
     @Bean
     PasswordEncoder passwordEncoder(){
         return new BCryptPasswordEncoder();

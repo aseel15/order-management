@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface UserService {
 
-    List<UserDto> getAllUsers();
+   /* List<UserDto> getAllUsers();
 
     UserDto getUserById(int id);
 
@@ -15,7 +15,7 @@ public interface UserService {
 
     UserDto updateUser(UserDto userDto, int id);
 
-    void deleteUser(int id);
+    void deleteUser(int id);*/
 
     UserDto getByUsername(String username);
 }
